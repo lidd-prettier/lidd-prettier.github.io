@@ -1,57 +1,327 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Prettier</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to bottom, #E91E63, #3F51B5);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            padding: 20px 50px;
+            background-color: white;
+            color: black;
+        }
+
+        .header .left-spacer,
+        .header .right-spacer {
+            flex: 0 0 100px;
+            /* Creates space */
+        }
+
+        .header img {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .header .logo-text {
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .header nav {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .header .contact-button {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            border-color: black;
+            padding: 10px 20px;
+            border-radius: 1px;
+            font-weight: bold;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #3F51B5;
+            width: auto;
+            height: auto;
+            max-width: 400px;
+            max-height: 100%;
+        }
+
+        .main>* {
+            margin: 10px 0;
+        }
+
+        .main h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .main p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .phone-container {
+            position: relative;
+            width: 250px;
+            /* Fixed size to ensure visibility */
+            height: 500px;
+            margin: 20px 0;
+            background: url('path-to-your-phone-mockup-image.png') no-repeat center center;
+            background-size: contain;
+        }
+
+        .phone-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* Ensures the video scales appropriately */
+        }
+
+        .download-now {
+            color: #E91E63;
+            /* Change this to your desired color */
+        }
+
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .download-buttons img {
+            margin: 10px;
+            width: 150px;
+        }
+
+        .terms-and-policy a {
+            color: #E91E63;
+            /* Change this to your desired color */
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            padding: 30px 20px;
+            background-color: white;
+            color: black;
+            box-sizing: border-box;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 100px;
+            /* Space on the left */
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo {
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        .footer-logo-text {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .footer-text {
+            margin: 10px 0;
+            font-size: 0.9em;
+            text-align: left;
+            /* Optional: Ensures left alignment */
+            white-space: normal;
+            /* Ensures normal space handling */
+        }
+
+        .footer-text a {
+            color: #E91E63;
+            /* Custom color */
+            text-decoration: none;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .footer-social-icons a img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .footer-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 30px;
+            text-align: left;
+        }
+
+        .footer-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-right: 100px;
+            /* Space on the right */
+        }
+
+        .footer-right h3 {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .footer-right p {
+            margin: 0 0 10px 0;
+            font-size: 0.9em;
+            color: #E91E63;
+            /* Custom color */
+        }
+
+        .footer-download-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .footer-download-buttons a img {
+            width: 135px;
+            margin: 5px 0;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="card-container">
-        <div class="card text-card">
-            <div class="text-container">
-                <h3> Privacy Policy</h3>
-Last updated: 19 Sep 2023
-<br>
-LIDD ("us," "we," or "our") operates the Prettier mobile application (the "Service").
-<br>
-This page informs you that we do not collect any personal data or information from users of our Service. You can use our app with confidence, knowing that your privacy is not compromised.
-<br>
-No Data Collection
-<br>
-We do not collect any of the following types of data:
-<br>
-Personal Data Usage 
-<br> Data Cookies 
-<br> Device Information 
-<br><br> Contact Us
-<br><br>
-If you have any questions or concerns about our privacy policy or our app, please feel free to contact us at prettier@lidd.com
-<br><br> By <a href="https://lidd.com/">LIDD Consultants</a>
+    <div class="header">
+        <div class="left-spacer"></div>
+        <img src="prettier-logo.png" alt="Prettier Logo">
+        <span class="logo-text">Prettier</span>
+        <nav>
+            <a href="#">Features</a>
+            <a href="#">Company</a>
+            <a href="#">Subscription</a>
+        </nav>
+        <div class="right-spacer"></div>
+        <a href="mailto:prettier@lidd.com" class="contact-button">Contact Us</a>
+    </div>
+
+    <div class="main">
+        <h1>Turn Every Outing into Something Prettier.</h1>
+        <br>
+        <p>Explore charming routes, connect with fellow adventurers, and immerse yourself in the cities' best-kept
+            secrets, no matter where you are.</p>
+        <div class="phone-container">
+            <video autoplay loop muted playsinline>
+                <source src="demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p class="download-now">DOWNLOAD NOW</p>
+        <div class="download-buttons">
+            <a href="https://apps.apple.com/ca/app/prettier/id6450973776"><img
+                    src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store"></a>
+        </div>
+        <p class="terms-and-policy">By subscribing to Prettier, you agree to the <a href="#">Terms of Service</a>. View
+            our <a href="#">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="footer">
+        <div class="footer-left">
+            <div class="footer-logo-container">
+                <img src="prettier-logo.png" alt="Prettier Logo" class="footer-logo">
+                <span class="footer-logo-text">Prettier</span>
+            </div>
+            <p class="footer-text">Prettier protects your data.<br>
+                Read more in our <a href="privacy-policy.html">Privacy Policy</a>.
+            </p>
+            <div class="footer-social-icons">
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
             </div>
         </div>
-        <div class="card video-card">
-            <div class="media-container">
-                <video autoplay loop muted playsinline>
-                    <source src="demo.mp4">
-                    Your browser does not support the video tag.
-                </video>
+        <div class="footer-center">
+            <div class="footer-links">
+                <a href="#">Features</a>
+                <a href="#">Subscription</a>
+                <a href="#">Company</a>
+                <a href="#">Routes</a>
+                <a href="#">Privacy</a>
+                <a href="#">Useful Info</a>
             </div>
-            <div class="description-container">
-                <a href="https://apps.apple.com/ca/app/prettier/id6450973776">
-                    <img src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Available on iOS" width="150" />
-                </a>
-
-                <p>Welcome to <a href="https://apps.apple.com/ca/app/prettier/id6450973776">Prettier</a>, your gateway to scenic adventures. Redefine the way you walk with our app, exploring captivating routes through parks, museums, landmarks, and more. 
-                    <br><br>
-                    With a Premium subscription, unlock unlimited access to picturesque journeys that awaken your senses and create lasting memories. 
-                    <br><br>Elevate your travel experiences and join our community of passionate travellers who know that the world's beauty is best enjoyed along the way with <a href="https://apps.apple.com/ca/app/prettier/id6450973776">Prettier</a>.</p>
-                    <br><br> By <a href="https://lidd.com/">LIDD Consultants</a>
-
+        </div>
+        <div class="footer-right">
+            <h3>Let's Get In-Touch</h3>
+            <p>Insert contact info here.</p>
+            <div class="footer-download-buttons">
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/ca/app/prettier/id6450973776"><img
+                            src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                            alt="Download on the App Store"></a>
                 </div>
+            </div>
         </div>
     </div>
-    <div class="footer-bar">
-        <h3>For support and inquiries</h3>
-        <h4><a href="mailto:prettier@lidd.com">Contact Us</a></h4>
-    </div>
+
+
+
 </body>
+
 </html>
