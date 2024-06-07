@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import demoVideo from './demo.mp4';
 import appStoreBadge from './Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg';
 
@@ -21,7 +23,7 @@ const Home = ({ setView }) => {
         </a>
       </div>
       <p className="terms-and-policy">
-        By subscribing to Prettier, you agree to the <a href="#">Terms of Service</a>. View our <a href="#" onClick={() => setView('privacy')}>Privacy Policy</a>.
+        By subscribing to Prettier, you agree to the <a href="#">Terms of Service</a>. View our <Link href="#" onClick={() => setView('privacy')}>Privacy Policy</Link>.
       </p>
     </>
   );
