@@ -102,14 +102,19 @@ function App() {
               Subscription
             </a>
             <a
+            href="#"
+            className={view === 'gallery' ? 'active' : ''}
+            onClick={() => setView('gallery')}
+          >
+            Gallery
+          </a>
+            <a
               href="#"
               className={view === 'privacy' ? 'active' : ''}
               onClick={() => setView('privacy')}
             >
               Privacy
             </a>
-            <a href="#">Routes</a>
-            <a href="#">Useful Info</a>
           </div>
         </div>
         <div className="footer-right">
