@@ -23,7 +23,7 @@ const Home = ({ setView }) => {
         </a>
       </div>
       <p className="terms-and-policy">
-        By subscribing to Prettier, you agree to the <a href="#">Terms of Service</a>. View our <Link href="#" onClick={() => setView('privacy')}>Privacy Policy</Link>.
+        By subscribing to Prettier, you agree to the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Service</a>. View our <Link href="#" onClick={() => setView('privacy')}>Privacy Policy</Link>.
       </p>
     </>
   );
