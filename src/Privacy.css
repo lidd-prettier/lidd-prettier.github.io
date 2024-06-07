@@ -1,0 +1,35 @@
+.privacy-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-subheading {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .privacy-text {
+    font-size: 1.1em;
+    text-align: left;
+    margin: 10px 0;
+  }
+  
+  .privacy-list {
+    padding-left: 20px; /* Add some padding to the left */
+  }
+  
+  .privacy-list li {
+    margin: 5px 0;
+    font-size: 1.1em; /* Ensure the font size matches other text */
+  }
+  
+  a {
+    color: #E91E63;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
