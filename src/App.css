@@ -1,4 +1,4 @@
-body {
+ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #E91E63, #3F51B5);
@@ -11,10 +11,15 @@ body {
   /* Prevent horizontal scrolling */
 }
 
+html, body {
+  min-height: 100vh;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-height: 100vh;
 }
 
 .header {
@@ -190,6 +195,7 @@ button:active {
   background-color: white;
   color: black;
   box-sizing: border-box;
+  margin-top: auto;
 }
 
 .footer-left {

@@ -52,84 +52,84 @@ function App() {
           <button className="contact-button">Contact Us</button>
         </header>
 
-        <main className="main">
-          <div className="main-content">
-            {view === 'home' && <Home setView={setView} />}
-            {view === 'privacy' && <Privacy />}
-            {view === 'subscription' && <Subscription />}
-            {view === 'gallery' && <Gallery />}
-          </div>
-        </main>
+          <main className="main">
+            <div className="main-content">
+              {view === 'home' && <Home setView={setView} />}
+              {view === 'privacy' && <Privacy />}
+              {view === 'subscription' && <Subscription />}
+              {view === 'gallery' && <Gallery />}
+            </div>
+          </main>
 
-        <footer className="footer">
-          <div className="footer-left">
-            <div className="footer-logo-container">
-              <img src={prettierLogo} alt="Prettier Logo" className="footer-logo" />
-              <span className="footer-logo-text">Prettier</span>
-            </div>
-            <p className="footer-text">
-              Prettier protects your data.<br />
-              Read more in our <Link
-                to="/privacy"
-                className={view === 'privacy' ? 'active' : ''}
-                onClick={() => setView('privacy')}
-              >
-                Privacy Policy.
-              </Link>
-            </p>
-            <div className="footer-social-icons">
-              <a href="https://x.com/prettierapp​">
-                <img src={twitterIcon} alt="Twitter" />
-              </a>
-              <a href="https://www.instagram.com/prettierapp">
-                <img src={instagramIcon} alt="Instagram" />
-              </a>
-            </div>
-          </div>
-          <div className="footer-center">
-            <div className="footer-links">
-              <Link
-                to="/features"
-                className={view === 'home' ? 'active' : ''}
-                onClick={() => setView('home')}
-              >
-                Features
-              </Link>
-              <Link
-                to="/subscription"
-                className={view === 'subscription' ? 'active' : ''}
-                onClick={() => setView('subscription')}
-              >
-                Subscription
-              </Link>
-              <Link
-                to="/gallery"
-                className={view === 'gallery' ? 'active' : ''}
-                onClick={() => setView('gallery')}
-              >
-                Gallery
-              </Link>
-              <Link
-                to="/privacy"
-                className={view === 'privacy' ? 'active' : ''}
-                onClick={() => setView('privacy')}
-              >
-                Privacy
-              </Link>
-            </div>
-          </div>
-          <div className="footer-right">
-            <h3>Let's Get In-Touch</h3>
-            <p>prettier@lidd.com</p>
-            <div className="footer-download-buttons">
-              <div className="download-buttons">
-                <a href="https://apps.apple.com/ca/app/prettier/id6450973776">
-                  <img src={appStoreBadge} alt="Download on the App Store" />
+          <footer className="footer">
+            <div className="footer-left">
+              <div className="footer-logo-container">
+                <img src={prettierLogo} alt="Prettier Logo" className="footer-logo" />
+                <span className="footer-logo-text">Prettier</span>
+              </div>
+              <p className="footer-text">
+                Prettier protects your data.<br />
+                Read more in our <Link
+                  to="/privacy"
+                  className={view === 'privacy' ? 'active' : ''}
+                  onClick={() => setView('privacy')}
+                >
+                  Privacy Policy.
+                </Link>
+              </p>
+              <div className="footer-social-icons">
+                <a href="https://x.com/prettierapp​">
+                  <img src={twitterIcon} alt="Twitter" />
+                </a>
+                <a href="https://www.instagram.com/prettierapp">
+                  <img src={instagramIcon} alt="Instagram" />
                 </a>
               </div>
             </div>
-          </div>
-        </footer>
+            <div className="footer-center">
+              <div className="footer-links">
+                <Link
+                  to="/features"
+                  className={view === 'home' ? 'active' : ''}
+                  onClick={() => setView('home')}
+                >
+                  Features
+                </Link>
+                <Link
+                  to="/subscription"
+                  className={view === 'subscription' ? 'active' : ''}
+                  onClick={() => setView('subscription')}
+                >
+                  Subscription
+                </Link>
+                <Link
+                  to="/gallery"
+                  className={view === 'gallery' ? 'active' : ''}
+                  onClick={() => setView('gallery')}
+                >
+                  Gallery
+                </Link>
+                <Link
+                  to="/privacy"
+                  className={view === 'privacy' ? 'active' : ''}
+                  onClick={() => setView('privacy')}
+                >
+                  Privacy
+                </Link>
+              </div>
+            </div>
+            <div className="footer-right">
+              <h3>Let's Get In-Touch</h3>
+              <p>prettier@lidd.com</p>
+              <div className="footer-download-buttons">
+                <div className="download-buttons">
+                  <a href="https://apps.apple.com/ca/app/prettier/id6450973776">
+                    <img src={appStoreBadge} alt="Download on the App Store" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
       </div>
     </Router>
   );
