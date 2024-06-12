@@ -12,7 +12,9 @@ import Gallery from './Gallery';
 
 function App() {
   const [view, setView] = useState('home'); // State to manage current view
-
+  const handleContactClick = () => {
+    window.location.href = 'mailto:prettier@lidd.com';
+  };
   return (
     <Router>
       <div className="App">
@@ -49,7 +51,7 @@ function App() {
               Gallery
             </Link>
           </nav>
-          <button className="contact-button">Contact Us</button>
+          <button className="contact-button" onClick={handleContactClick}>Contact Us</button>
         </header>
 
           <main className="main">

@@ -62,7 +62,8 @@ const Gallery = () => {
   return (
     <div className="gallery-container">
       <h1 className="gallery-heading">Gallery</h1>
-      <p className="gallery-text">This is the Gallery page.</p>
+      <br></br>
+      <script type="text/javascript" src="https://www.juicer.io/embed/prettierapp/embed-code.js" async defer></script>
       <br></br>
       <InstagramEmbed embedHtml={embedHtml} />
     </div>
