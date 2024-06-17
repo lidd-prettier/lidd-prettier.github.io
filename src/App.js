@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { HashRouter as Router, Link } from 'react-router-dom';
+import { HashRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import './App.css';
 import prettierLogo from './prettier-logo.png';
 import twitterIcon from './twitter-icon.png';
@@ -97,12 +97,16 @@ function App() {
 
         <main className="main">
           <div className="main-content">
-            {view === 'home' && <Home setView={setView} />}
-            {view === 'privacy' && <Privacy />}
-            {view === 'subscription' && <Subscription />}
-            {view === 'gallery' && <Gallery />}
+            <Routes>
+              <Route path="/features" element={<Home setView={setView} />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/subscription" element={<Subscription />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="*" element={<h1>404 Not Found</h1>} />
+            </Routes>
           </div>
         </main>
+
 
         <footer className="footer">
           <div className="footer-left">
