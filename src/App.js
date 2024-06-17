@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { HashRouter as Router, Link } from 'react-router-dom';
 import './App.css';
 import prettierLogo from './prettier-logo.png';
 import twitterIcon from './twitter-icon.png';
