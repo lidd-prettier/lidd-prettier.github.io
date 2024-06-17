@@ -42,7 +42,7 @@ function App() {
   }, [menuRef]);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <header className="header">
           <div className="logo-container" onClick={() => setView('home')}>
@@ -55,8 +55,8 @@ function App() {
               className={view === 'home' ? 'active' : ''}
               onClick={() => {
                 setView('home');
-              closeMenu();
-            }}
+                closeMenu();
+              }}
             >
               Features
             </Link>
@@ -73,7 +73,7 @@ function App() {
             <Link
               to="/privacy"
               className={view === 'privacy' ? 'active' : ''}
-              onClick={() => { 
+              onClick={() => {
                 setView('privacy');
                 closeMenu();
               }}
