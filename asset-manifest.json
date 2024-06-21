@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e4e3a7dc.css",
-    "main.js": "/static/js/main.d47af50d.js",
+    "main.js": "/static/js/main.f1ca6c46.js",
     "static/js/453.04d4211c.chunk.js": "/static/js/453.04d4211c.chunk.js",
     "static/media/demo.mp4": "/static/media/demo.7b8f51de32fa8fa02579.mp4",
     "static/media/instagram-icon.png": "/static/media/instagram-icon.edb90ecc706a7a25542b.png",
@@ -9,11 +9,11 @@
     "static/media/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg": "/static/media/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.8c4986ee4828b47d16f5cd694ef065f2.svg",
     "index.html": "/index.html",
     "main.e4e3a7dc.css.map": "/static/css/main.e4e3a7dc.css.map",
-    "main.d47af50d.js.map": "/static/js/main.d47af50d.js.map",
+    "main.f1ca6c46.js.map": "/static/js/main.f1ca6c46.js.map",
     "453.04d4211c.chunk.js.map": "/static/js/453.04d4211c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e4e3a7dc.css",
-    "static/js/main.d47af50d.js"
+    "static/js/main.f1ca6c46.js"
   ]
 }
