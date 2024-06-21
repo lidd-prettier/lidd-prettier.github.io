@@ -71,16 +71,6 @@ function App() {
               Subscription
             </Link>
             <Link
-              to="/privacy"
-              className={view === 'privacy' ? 'active' : ''}
-              onClick={() => {
-                setView('privacy');
-                closeMenu();
-              }}
-            >
-              Privacy
-            </Link>
-            <Link
               to="/gallery"
               className={view === 'gallery' ? 'active' : ''}
               onClick={() => {
