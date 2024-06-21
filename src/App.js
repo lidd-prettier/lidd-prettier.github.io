@@ -98,6 +98,7 @@ function App() {
         <main className="main">
           <div className="main-content">
             <Routes>
+            <Route path="/" element={<Home setView={setView} />} />
               <Route path="/features" element={<Home setView={setView} />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/subscription" element={<Subscription />} />
