@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Create CNAME file
+        run: echo "prettier.app" > build/CNAME
+
       - name: Build and deploy
         run: |
           git config --global user.name $user_name
