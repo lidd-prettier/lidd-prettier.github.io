@@ -28,8 +28,8 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: Create CNAME file
-        run: echo "prettier.app" > build/CNAME
+      - name: Copy CNAME to build directory
+        run: cp CNAME build/CNAME
 
       - name: Build and deploy
         run: |
