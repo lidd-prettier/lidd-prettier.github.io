@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { HashRouter as Router, Link, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Link, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import prettierLogo from './prettier-logo.png';
 import twitterIcon from './twitter-icon.png';
@@ -41,13 +41,16 @@ function App() {
     };
   }, [menuRef]);
 
+
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <header className="header">
-          <div className="logo-container" onClick={() => setView('home')}>
-            <img src={prettierLogo} alt="Prettier Logo" className="logo" />
-            <span className="logo-text">Prettier</span>
+          <div className="logo-container">
+            <Link to="/" onClick={() => setView('home')}>
+              <img src={prettierLogo} alt="Prettier Logo" className="logo" />
+            </Link>            
+            <Link className="logo-text" to="/" onClick={() => setView('home')}>Prettier</Link>
           </div>
           <nav ref={menuRef} className={`nav ${menuOpen ? 'open' : ''}`}>
             <Link
@@ -88,7 +91,7 @@ function App() {
         <main className="main">
           <div className="main-content">
             <Routes>
-            <Route path="/" element={<Home setView={setView} />} />
+              <Route path="/" element={<Home setView={setView} />} />
               <Route path="/features" element={<Home setView={setView} />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/subscription" element={<Subscription />} />
